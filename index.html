@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<!-- ПУБЛИЧНАЯ ССЫЛКА: noindex стоит, чтобы страница уходила из поиска; с самой ссылкой это защиты даёт — снимайте осознанно --><meta name="robots" content="noindex, nofollow">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Здоровье начинается во рту — система работы врача в интернете</title>
+<style>
+  :root{
+    --green:#2e6b48; --green-dark:#245639; --cream:#f8f4ec; --ink:#1f2a24;
+    --muted:#5d6b60; --line:#ddd5c4; --accent:#c8a45a;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:Georgia,'Times New Roman',serif; color:var(--ink); background:var(--cream); line-height:1.55; font-size:16px;}
+  .wrap{max-width:860px; margin:0 auto; padding:36px 24px 64px;}
+  header.top{border-bottom:3px solid var(--green); padding-bottom:18px; margin-bottom:26px;}
+  .kicker{font-family:Arial,sans-serif; font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--green); font-weight:bold;}
+  h1{font-size:26px; line-height:1.22; margin:8px 0 10px; color:var(--green-dark);}
+  .meta{font-family:Arial,sans-serif; font-size:13.5px; color:var(--muted);}
+  .meta b{color:var(--ink);}
+  h2{font-size:20px; margin:30px 0 12px; color:var(--green-dark); break-after:avoid;}
+  h2 .num{display:inline-block; background:var(--green); color:#fff; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:15px; margin-right:10px; font-family:Arial,sans-serif;}
+  p{margin:0 0 10px;}
+  ul{margin:0 0 12px 20px;}
+  li{margin-bottom:6px;}
+  .lead{font-size:16.5px;}
+  .cards{display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin:14px 0;}
+  .card{background:#fff; border:1px solid var(--line); border-radius:10px; padding:14px 14px 12px; break-inside:avoid;}
+  .card .t{font-family:Arial,sans-serif; font-weight:bold; font-size:14px; color:var(--green-dark); margin-bottom:6px;}
+  .card p{font-size:13.5px; color:var(--muted); margin:0;}
+  table{width:100%; border-collapse:collapse; margin:10px 0 6px; background:#fff; font-size:14px;}
+  th{background:var(--green); color:#fff; text-align:left; padding:9px 10px; font-family:Arial,sans-serif; font-size:12.5px; letter-spacing:.03em;}
+  td{border-bottom:1px solid var(--line); padding:9px 10px; vertical-align:top;}
+  .note{font-family:Arial,sans-serif; font-size:12px; color:var(--muted); margin-top:4px;}
+
+  /* карта системы */
+  .map{display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:14px 0;}
+  .mnode{background:#fff; border:1px solid var(--line); border-radius:10px; padding:12px 14px; break-inside:avoid;}
+  .mnode .mt{font-family:Arial,sans-serif; font-weight:bold; font-size:13.5px; color:var(--green-dark);}
+  .mnode .ms{font-family:Arial,sans-serif; font-size:12px; color:var(--muted); margin-top:3px;}
+  .mnode.core{background:var(--green); border-color:var(--green);}
+  .mnode.core .mt{color:#fff;}
+  .mnode.core .ms{color:#e7efe9;}
+  .mnode.gold{border-left:5px solid var(--accent);}
+  .mnode.done .mt::after{content:"  — готов"; font-weight:normal; font-size:11px; color:var(--accent); white-space:nowrap;}
+  .arrow{text-align:center; font-family:Arial,sans-serif; font-size:12px; color:var(--green); font-weight:bold; padding:2px 0;}
+  .mapnote{font-family:Arial,sans-serif; font-size:12.5px; color:var(--muted); margin-top:8px;}
+
+  /* путь читателя (лесенка) */
+  .ladder{margin:12px 0;}
+  .rung{display:flex; align-items:stretch; gap:10px; margin-bottom:8px; break-inside:avoid;}
+  .rung .rn{flex:0 0 34px; background:var(--green); color:#fff; border-radius:8px; display:flex; align-items:center; justify-content:center; font-family:Arial,sans-serif; font-weight:bold; font-size:15px;}
+  .rung .rb{flex:1; background:#fff; border:1px solid var(--line); border-radius:8px; padding:10px 14px;}
+  .rung .rb b{font-family:Arial,sans-serif; font-size:13.5px; color:var(--green-dark);}
+  .rung .rb span{display:block; font-size:13px; color:var(--muted); margin-top:2px;}
+  .rung.g .rn{background:var(--accent);}
+  .safety{background:#fff; border:1px solid var(--line); border-left:5px solid var(--accent); border-radius:8px; padding:14px 16px; margin:12px 0; break-inside:avoid;}
+  .safety .t{font-family:Arial,sans-serif; font-weight:bold; font-size:14px; color:var(--green-dark); margin-bottom:6px;}
+
+  /* макет поста */
+  .post{background:#fff; border:1px solid var(--line); border-radius:14px; padding:16px 16px 12px; margin:10px 0; max-width:520px; break-inside:avoid;}
+  .post .ph{display:flex; align-items:center; gap:10px; margin-bottom:8px;}
+  .post .ava{width:34px; height:34px; border-radius:50%; background:var(--green); color:#fff; display:flex; align-items:center; justify-content:center; font-family:Arial,sans-serif; font-weight:bold; font-size:12px;}
+  .post .pn{font-family:Arial,sans-serif; font-size:13px; font-weight:bold;}
+  .post .pd{font-family:Arial,sans-serif; font-size:11px; color:var(--muted);}
+  .post .pt{font-family:Arial,sans-serif; font-weight:bold; font-size:14.5px; margin-bottom:6px;}
+  .post p{font-size:13.5px; color:var(--ink);}
+  .post .badge{display:inline-block; background:var(--cream); border:1px solid var(--accent); color:#8a6a24; font-family:Arial,sans-serif; font-size:10.5px; font-weight:bold; border-radius:5px; padding:2px 8px; margin-top:8px; letter-spacing:.06em;}
+  .posts{display:grid; grid-template-columns:1fr; gap:4px;}
+  .footnote{border-top:2px solid var(--green); margin-top:34px; padding-top:12px; font-family:Arial,sans-serif; font-size:12.5px; color:var(--muted);}
+  .big{display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin:14px 0;}
+  .big .b{background:#fff; border:1px solid var(--line); border-left:5px solid var(--green); border-radius:8px; padding:14px 16px; break-inside:avoid;}
+  .big .b .n{font-size:20px; font-weight:bold; color:var(--green-dark); font-family:Arial,sans-serif;}
+  .big .b .l{font-family:Arial,sans-serif; font-size:12px; color:var(--muted);}
+
+  @media print{
+    body{background:#fff; font-size:12px; line-height:1.45;}
+    .wrap{padding:0; max-width:none;}
+    h1{font-size:21px;}
+    h2{font-size:17px; margin-top:18px;}
+    .meta{font-size:12px;}
+    table,.card,.mnode,.rung .rb,.safety,.post,.big .b{break-inside:avoid;}
+    table{break-after:avoid-page;}
+    .cards{gap:10px; margin:10px 0;}
+    .card{padding:10px;}
+    .big .b{padding:10px 12px;}
+    .big .b .n{font-size:17px;}
+    .safety,.post{padding:10px 12px;}
+    table td{padding:7px 8px;}
+    li{margin-bottom:3px;}
+    p{margin-bottom:7px;}
+    .footnote{margin-top:20px; padding-top:10px;}
+    .map{gap:8px;}
+  }
+  @media (max-width:640px){
+    .cards,.map,.big{grid-template-columns:1fr;}
+    h1{font-size:22px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="top">
+  <div class="kicker">Концепция · для обсуждения вместе</div>
+  <h1>«Здоровье начинается во рту»: как ваша экспертиза работает в интернете</h1>
+  <div class="meta">
+    <b>Кому:</b> Семёнова Елена Вячеславовна, врач-стоматолог &nbsp;·&nbsp; <b>Дата:</b> 18.11.2026<br>
+    <b>Исполнитель:</b> Косовов Александр Валентинович &nbsp;·&nbsp; тел. <b>+7 916 677-84-12</b> &nbsp;·&nbsp; Telegram: <b>@al_pol</b>
+  </div>
+</header>
+
+<h2><span class="num">1</span>Идея одним взглядом</h2>
+<p class="lead">У вас два сильных актива: 30 лет практики и глубокая экспертиза на стыке стоматологии,
+микробиоты и персонального питания — с двумя партнёрствами, Novabiom и ImmunoHealth. Сегодня эта
+экспертиза видна только на приёме. Концепция делает её видимой в интернете — и превращает
+в поток пациентов и консультаций.</p>
+<div class="big">
+  <div class="b"><div class="n">1 · Знания</div><div class="l">ваши материалы и исследования становятся статьями и постами</div></div>
+  <div class="b"><div class="n">2 · Авторитет</div><div class="l">вас находят по темам «микробиота», «дёсны», «питание» — и приходят уже с доверием</div></div>
+  <div class="b"><div class="n">3 · Доход</div><div class="l">записи на приём, консультации по тестам, партнёрские условия</div></div>
+</div>
+
+<h2><span class="num">2</span>Карта системы</h2>
+<div class="map">
+  <div class="mnode core done"><div class="mt">Сайт стоматолога</div><div class="ms">запись на приём: услуги, цены, кейсы, отзывы. Научный раздел о микробиоте уже добавлен</div></div>
+  <div class="mnode"><div class="mt">Информационный сайт</div><div class="ms">библиотека статей: стоматология, микробиота, питание, ваше мнение. Читатель приходит из поиска Яндекса</div></div>
+  <div class="arrow">↓ статья заканчивается подарком за подписку &nbsp;·&nbsp; ↓</div>
+  <div class="arrow">пациент с вопросом «болит/кровит» идёт по ссылке на запись ↑</div>
+  <div class="mnode"><div class="mt">Телеграм-канал</div><div class="ms">живой голос врача: разборы исследований, мифов, ответы на вопросы. 2–3 выпуска в неделю</div></div>
+  <div class="mnode gold"><div class="mt">Кабинет и ресепшн — QR</div><div class="ms">пациент после приёма сканирует код: оставляет отзыв или подписывается на канал</div></div>
+  <div class="mnode gold"><div class="mt">Тесты партнёров</div><div class="ms">Novabiom — по вашей рекомендации; ImmunoHealth — сдаётся у вас, комплект и консультация ваши</div></div>
+  <div class="mnode gold"><div class="mt">Консультация по результатам</div><div class="ms">разбор отчёта теста с пациентом — онлайн, ваша отдельная услуга</div></div>
+</div>
+<p class="mapnote">Каждый переход между площадками помечен — в статистике видно, откуда пришёл каждый пациент и подписчик.</p>
+
+<h2><span class="num">3</span>Зачем каждая часть системы и что вы получаете</h2>
+<table>
+  <tr><th>Часть системы</th><th>Её единственная работа</th><th>Ваш результат</th></tr>
+  <tr><td><b>Сайт стоматолога</b> (готов)</td><td>Превратить интерес в запись: показать услуги, кейсы, цены и честные ответы</td><td>Записи на приём</td></tr>
+  <tr><td><b>Информационный сайт</b></td><td>Собрать знания в статьи, которые находят через поиск; подарить файл за подписку</td><td>Новые читатели → подписчики; среди них — будущие пациенты</td></tr>
+  <tr><td><b>Телеграм-канал</b></td><td>Быть рядом с читателем каждый день: польза, ответы, ваш голос. Стоматологические темы ведут на запись</td><td>Доверие, вопросы, запись на приём и тесты</td></tr>
+  <tr><td><b>Партнёрства</b></td><td>Рекомендовать тест тем, кому он полезен, — через спокойный разбор вместо рекламного крика</td><td>Условия партнёра + консультации по отчётам</td></tr>
+</table>
+
+<h2><span class="num">4</span>Путь читателя: от статьи до визита</h2>
+<div class="ladder">
+  <div class="rung"><div class="rn">1</div><div class="rb"><b>Человек ищет в Яндексе «кровоточивость дёсен»</b><span>находит вашу статью на информационном сайте — с исследованиями и честными оговорками</span></div></div>
+  <div class="rung"><div class="rn">2</div><div class="rb"><b>В конце статьи — подарок за подписку</b><span>«Чек-лист домашнего ухода за дёснами и свежего дыхания» — за подписку на канал</span></div></div>
+  <div class="rung"><div class="rn">3</div><div class="rb"><b>Канал: польза 2–3 раза в неделю</b><span>разборы исследований, мифов, ответы на вопросы читателей — в вашем голосе</span></div></div>
+  <div class="rung g"><div class="rn">4</div><div class="rb"><b>Готовый к действию читатель приходит двумя путями</b><span>«надо лечить» — запись на приём на сайте стоматолога; «хочу понять организм» — тест партнёра</span></div></div>
+  <div class="rung g"><div class="rn">5</div><div class="rb"><b>После теста — ваша консультация по результатам</b><span>разбор отчёта онлайн; при стоматологических находках — приглашение на приём</span></div></div>
+</div>
+<div class="safety">
+  <div class="t">Правила экологичности — основа системы</div>
+  <ul>
+    <li><b>Польза: предложение = 8:2.</b> На 8–10 полезных выпусков — одно партнёрское и одно продуктовое.</li>
+    <li><b>Партнёрское — с открытой этикеткой.</b> Пометка «партнёрский материал» стоит всегда.</li>
+    <li><b>Отписка — в один шаг,</b> без вопросов и уговоров. Подписчики приходят сами, за пользой; покупные базы и накрутка исключены.</li>
+    <li><b>Факт — только из источника.</b> Все научные утверждения берём из ваших материалов, с оговорками «что доказано, а что ещё изучается».</li>
+  </ul>
+</div>
+
+<h2><span class="num">5</span>Продукты: лестница от подарка до программы</h2>
+<table>
+  <tr><th>Ступень</th><th>Продукт</th><th>Цена</th><th>Роль в системе</th></tr>
+  <tr><td>Подарок</td><td><b>Чек-лист ухода за дёснами и свежим дыханием</b> — лист 1–2 страницы, из научного раздела сайта</td><td>бесплатно, за подписку</td><td>собирает подписчиков канала</td></tr>
+  <tr><td>Первый шаг</td><td><b>Гайд «Оральные пробиотики: какие штаммы и когда работают»</b> — о K12, M18, CMU, Prodentis простым языком</td><td>~500–1000 ₽ <span class="note">(финальную цену выбираем вместе)</span></td><td>первая оплата — читатель превращается в клиента</td></tr>
+  <tr><td>Основное</td><td><b>Консультация по отчёту теста</b> (Novabiom / ImmunoHealth) — онлайн</td><td>ваша цена</td><td>главный доход вне кресла</td></tr>
+  <tr><td>Основное</td><td><b>«90 дней здоровых дёсен»</b> — программа сопровождения с визитами</td><td>ваша цена</td><td>глубокая работа + возврат пациентов</td></tr>
+  <tr><td>Партнёрское</td><td><b>Тесты Novabiom и ImmunoHealth</b> — по вашей рекомендации</td><td>цена партнёра</td><td>условия партнёра + поток на консультации</td></tr>
+</table>
+<p class="note">Красная линия: продаются знания и сопровождение. Конкретные препараты рекомендуются только на приёме, персонально.</p>
+
+<h2><span class="num">6</span>Партнёрства: две модели — работаем с каждой по-своему</h2>
+<div class="cards">
+  <div class="card"><div class="t">Novabiom — рекомендация эксперта</div><p>Вы рекомендуете тест кишечной микробиоты тем, кому он полезен. Пациент сдаёт сам, отчёт приходит ему. Разбор отчёта — ваша консультация, отдельная услуга.</p></div>
+  <div class="card"><div class="t">ImmunoHealth — тест у вас</div><p>Пациент сдаёт тест у доктора. Вы выдаёте комплект: приложение + 5 таблиц (результаты, диеты, противодрожжевой протокол) и проговариваете консультацию. Вы — ключевое звено продукта.</p></div>
+</div>
+<p><b>Четыре вопроса партнёрам</b> (ответы снимут главные вопросы):</p>
+<ul>
+  <li>условия для врачей: комиссия, промокоды;</li>
+  <li>готовые материалы — и можно ли перерабатывать их под ваш спокойный научный тон;</li>
+  <li>готовность упомянуть ваш канал у себя — взаимный поток читателей;</li>
+  <li>ImmunoHealth: консультация входит в цену теста или назначается вами отдельно; есть ли обучение врача.</li>
+</ul>
+<div class="post">
+  <div class="ph"><div class="ava">ЕС</div><div><div class="pn">Елена Семёнова · здоровье начинается во рту</div><div class="pd">пример партнёрского выпуска канала</div></div></div>
+  <div class="pt">Зачем стоматологу тест кишечной микробиоты</div>
+  <p>Рот и кишечник сообщаются: со слюной в пищеварительный тракт ежедневно попадают оральные бактерии. Состояние одной экосистемы отражается на другой — это подтверждают обзоры 2026 года. Тест Novabiom показывает состав кишечной микробиоты; на консультации разберём, что это значит лично для вас и ваших дёсен.</p>
+  <p style="font-family:Arial,sans-serif;font-size:12.5px;color:var(--green-dark);font-weight:bold;margin-top:6px">Подробнее о тесте — по ссылке &gt;&gt;</p>
+  <span class="badge">Партнёрский материал</span>
+</div>
+
+<h2><span class="num">7</span>Канал: 12 выпусков первого месяца</h2>
+<p>Собираются из ваших материалов — от вас требуется только утверждение. Примеры:</p>
+<div class="posts">
+  <div class="post"><div class="ph"><div class="ava">ЕС</div><div><div class="pn">Елена Семёнова</div><div class="pd">выпуск недели 2 · наука</div></div></div>
+    <div class="pt">Ваш рот разговаривает с сердцем</div>
+    <p>Обзор в Nature Reviews Cardiology связывает болезни дёсен с состоянием сосудов. Причинность ещё изучается, а вот польза здоровых дёсен — факт. Рассказываю, как это работает.</p></div>
+  <div class="post"><div class="ph"><div class="ava">ЕС</div><div><div class="pn">Елена Семёнова</div><div class="pd">выпуск недели 3 · практика</div></div></div>
+    <div class="pt">Ирригатор: 12 недель наблюдения</div>
+    <p>В исследовании у тех, кто добавил ирригатор к чистке, дёсны воспалялись меньше и дыхание было свежее. Как выбрать и настроить режим — на приёме подберу под вашу ситуацию.</p></div>
+  <div class="post"><div class="ph"><div class="ava">ЕС</div><div><div class="pn">Елена Семёнова</div><div class="pd">выпуск недели 5–6 · партнёрское</div></div></div>
+    <div class="pt">Что вы получите после теста ImmunoHealth</div>
+    <p>Приложение с результатами и пять таблиц (режим питания, элиминационная диета, противодрожжевой протокол). Комплект приходит от вашего врача, и консультация по итогам — вместе со мной.</p>
+    <span class="badge">Партнёрский материал</span></div>
+</div>
+<p class="note">Название канала — на выбор: «Елена Семёнова | Микробиота и здоровье» · «Здоровье начинается во рту» · «Доктор Семёнова. Наука о здоровье рта».</p>
+
+<h2><span class="num">8</span>План на 90 дней</h2>
+<table>
+  <tr><th>Недели</th><th>Что делаем</th><th>Ваша роль</th></tr>
+  <tr><td><b>1–2</b></td><td>Канал стартует: название, оформление, подготовка 12 выпусков, закреп; чек-лист-подарок готов</td><td>выбрать название, утвердить выпуски</td></tr>
+  <tr><td><b>3–4</b></td><td>Помощник-бот выдаёт чек-лист за подписку и ведёт серию из 4 коротких подсказок; каркас информационного сайта</td><td>утвердить тексты подсказок</td></tr>
+  <tr><td><b>5–8</b></td><td>Статьи для поиска — по одной в неделю из ваших 14 тем; первый партнёрский выпуск; первый опрос читателей</td><td>утверждение — около часа в месяц</td></tr>
+  <tr><td><b>9–12</b></td><td>Первый эфир «Спросите врача» (30–40 минут); выпуск гайда по пробиотикам; сводка: подписчики, записи «из канала», тесты</td><td>эфир — 1 вечер; итоги — 1 встреча</td></tr>
+</table>
+<p class="note">Материалов у вас уже собрано на 3–4 месяца работы канала: 14 научных тем, 7 постов, комплекты партнёров.</p>
+
+<h2><span class="num">9</span>Что вы получаете в итоге</h2>
+<div class="cards">
+  <div class="card"><div class="t">Поток пациентов в клинику</div><p>записи со ссылок канала и статей; источник каждого пациента виден в статистике</p></div>
+  <div class="card"><div class="t">Доход вне кресла</div><p>консультации по отчётам тестов — онлайн, по расписанию, которое удобно вам</p></div>
+  <div class="card"><div class="t">Партнёрские условия</div><p>Novabiom и ImmunoHealth — рекомендации, которых читатели сами ждут</p></div>
+  <div class="card"><div class="t">Собственная площадка</div><p>список подписчиков и библиотека статей растут в ваш актив — они остаются с вами при любых изменениях</p></div>
+</div>
+
+<h2><span class="num">10</span>Правовое поле — кратко, шесть опор</h2>
+<p>Развёрнутый ответ я уже прислал вам сообщением — здесь та же картина коротко:</p>
+<div class="safety">
+  <div class="t">Шесть опор — все учтены в системе</div>
+  <ul>
+    <li><b>Персональные данные (152-ФЗ):</b> согласие — в каждой форме, политика конфиденциальности — на сайте, данных собираем минимум; уведомление Роскомнадзора — в чек-листе запуска.</li>
+    <li><b>Сведения о клинике и враче (323-ФЗ, приказ № 754н):</b> лицензия, образование, стаж, цены — на сайте; каждая строка подтверждается документом, поэтому жду от вас дипломы и сертификаты.</li>
+    <li><b>Реклама медицинских услуг (38-ФЗ, ст. 24):</b> предупреждение о противопоказаниях, лицензия, без обещаний результата; отзывы — только настоящие пациенты, через QR-стойки.</li>
+    <li><b>Партнёрские материалы (38-ФЗ, ст. 18.1):</b> пометка «партнёрский материал» и маркировка рекламы до публикации; ответственность за маркировку — на моей стороне (пропуск карается штрафом от 30 000 до 100 000 ₽ за каждый материал, поэтому порядок встроен в выпуск с первого дня).</li>
+    <li><b>Роли:</b> медицина, лицензия и цены — на стороне клиники; техника, тексты и маркировка — моя зона; финальную сверку всего пакета перед публикацией проходит юрист.</li>
+    <li><b>Хостинг:</b> российский, 300–800 ₽/мес — данные пациентов хранятся на серверах в РФ, как требует закон.</li>
+  </ul>
+</div>
+<p>Расширенный разбор права — по каждому объекту системы с чек-листами — пришлю после ваших документов об образовании и материалов партнёров.</p>
+
+<h2><span class="num">11</span>Решения, которые жду от вас</h2>
+<ul>
+  <li><b>Название канала</b> — один из трёх вариантов выше (или своё).</li>
+  <li><b>Старт канала</b> — одобрить план первых 12 выпусков или прислать правки.</li>
+  <li><b>Вопросы партнёрам</b> — переслать им четыре вопроса из раздела 6 или задать вместе на встрече.</li>
+  <li><b>Ваши цены</b> — консультация по отчёту, программа «90 дней», гайд.</li>
+  <li><b>Домен информационного сайта</b> — предложу варианты на следующей встрече.</li>
+</ul>
+
+<div class="footnote">
+  Концепция согласована по вашему видению: первый сайт — стоматология; второй — информационный, о стоматологии, интегративной медицине и микробиоме, связан с каналом; партнёрства — Novabiom и ImmunoHealth. Все материалы проекта — в вашей папке. Обсудим на встрече или в переписке: телефон и Telegram в шапке.
+</div>
+
+</div>
+</body>
+</html>
